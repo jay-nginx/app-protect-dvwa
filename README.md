@@ -33,6 +33,9 @@ On your browser open `localhost` port:80 to run DVWA Application
   
 ## Testing Some Security Features:
 
+Command Injection - <url>/vulnerabilities/exec/
+Stored Cross Site Scripting - Dataguard - <url>/vulnerabilities/xss_s/
+ 
 
 
 ### Possible Additions - will review them in future
