@@ -33,6 +33,9 @@ On your browser open `http://localhost` port:80 to run DVWA Application
 ## View the dashboard
 
  On your browser open `http://localhost:8080` to view the live activity metrics from your N+ instance
+ Creds for Dashbaord:
+user1:Welcome@user1
+user2:Welcome@user2
   
 ## Testing Some Security Features:
 
