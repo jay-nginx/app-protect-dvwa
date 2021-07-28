@@ -1,0 +1,21 @@
+version: '3'
+services:
+    dvwa:
+        image: vulnerables/web-dvwa
+        hostname: dvwa
+        ports:
+        - "8081:80"
+        container_name: dvwa_app
+    approtect:
+        image: app-protect:latest
+        hostname: app-protect
+        volumes:
+            - ./dashboard.conf:/etc/nginx/conf.d/dashboard.conf
+            - ./policy_type_dataguard.json:/etc/nginx/policy_type_dataguard.json
+            - ./nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx-repo.crt:/etc/ssl/nginx/nginx-repo.crt
+            - ./nginx-repo.key:/etc/ssl/nginx/nginx-repo.key
+        ports:
+            - "80:80"
+            - "8080:8080"
+        container_name: nginx_app_protect 
