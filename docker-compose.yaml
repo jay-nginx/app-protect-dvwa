@@ -12,6 +12,7 @@ services:
         volumes:
             - ./dashboard.conf:/etc/nginx/conf.d/dashboard.conf
             - ./policy_type_dataguard.json:/etc/nginx/policy_type_dataguard.json
+            - ./.htpasswd:/etc/nginx/.htpasswd
             - ./nginx.conf:/etc/nginx/nginx.conf
             - ./nginx-repo.crt:/etc/ssl/nginx/nginx-repo.crt
             - ./nginx-repo.key:/etc/ssl/nginx/nginx-repo.key
