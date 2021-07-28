@@ -24,7 +24,6 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 
 # Copy configuration files
 COPY nginx.conf /etc/nginx/
-COPY custom_log_format.json /etc/nginx/log-default.json
 COPY entrypoint.sh  ./
 
 CMD ["sh", "/entrypoint.sh"]
