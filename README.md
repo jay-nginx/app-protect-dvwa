@@ -25,11 +25,14 @@ Ensure that you are now able to view two running containers
 
 ## Run the Applicaiton
 
-On your browser open `localhost` port:80 to run DVWA Application
+On your browser open `http://localhost` port:80 to run DVWA Application
 
   username: admin
   password: password
-  
+
+## View the dashboard
+
+ On your browser open `http://localhost:8080` to view the live activity metrics from your N+ instance
   
 ## Testing Some Security Features:
 
