@@ -14,6 +14,7 @@ RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/app-protect-secur
 
 # Install NGINX App Protect
 RUN yum -y install app-protect app-protect-attack-signatures app-protect-threat-campaigns\
+   && yum -y install nginx-plus-module-headers-more \
    && yum clean all \
    && rm -rf /var/cache/yum \
    && rm -rf /etc/ssl/nginx
