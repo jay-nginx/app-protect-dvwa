@@ -11,13 +11,17 @@ RUN yum -y install wget ca-certificates epel-release
 # Add NGINX Plus repo to yum
 RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/nginx-plus-7.repo
 RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/app-protect-security-updates-7.repo
+RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/app-protect-dos-7.repo
 
 # Install NGINX App Protect
-RUN yum -y install app-protect app-protect-attack-signatures app-protect-threat-campaigns\
+RUN yum -y install app-protect app-protect-attack-signatures app-protect-threat-campaigns app-protect-dos\
    && yum -y install nginx-plus-module-headers-more \
    && yum clean all \
    && rm -rf /var/cache/yum \
    && rm -rf /etc/ssl/nginx
+
+# Install NGINX Headers-More Module
+RUN yum -y install nginx-plus-module-headers-more
 
 # Forward request logs to Docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
