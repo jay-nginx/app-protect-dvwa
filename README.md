@@ -37,6 +37,17 @@ On your browser open `http://localhost` port:80 to run DVWA Application
 `user1:Welcome@user1`
 `user2:Welcome@user2`
   
+### Dashboard - Metrics available under HTTP Upstream Tab
+Following are the metrics available when you have enabled the "zone" directive in the upstream context:
+<img width="1493" alt=HTTP Upstream Metrics" src="https://user-images.githubusercontent.com/52437445/130017389-eac605c0-65f3-4100-ba91-ecb3757985a0.png">
+
+### Dashboard - Metrics available under HTTP Zones Tab
+Following are the metrics available when you have "status_zone" directive enabled in your location/server context:
+<img width="1488" alt="HTTP Zone Metrics" src="https://user-images.githubusercontent.com/52437445/130017483-5e528de0-27d9-4f29-8b70-cf93b0c5a1d9.png">
+
+                                                                                                                                                     
+                                                                                                                                                     
+                                                                                                                                                     
 ## Testing Some Security Features:
 
 Command Injection - <url>/vulnerabilities/exec/
