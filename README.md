@@ -36,17 +36,26 @@ On your browser open `http://localhost` port:80 to run DVWA Application
  Creds for Dashbaord:
 `user1:Welcome@user1`
 `user2:Welcome@user2`
-  
+
 ### Dashboard - Metrics available under HTTP Upstream Tab
 Following are the metrics available when you have enabled the "zone" directive in the upstream context:
-<img width="1493" alt=HTTP Upstream Metrics" src="https://user-images.githubusercontent.com/52437445/130017389-eac605c0-65f3-4100-ba91-ecb3757985a0.png">
+
+<img width="1493" alt="http_upstreams" src="https://user-images.githubusercontent.com/52437445/130018076-a0f9acd4-ef31-41d0-91cb-b11d115a8b7a.png">
+
 
 ### Dashboard - Metrics available under HTTP Zones Tab
-Following are the metrics available when you have "status_zone" directive enabled in your location/server context:
-<img width="1488" alt="HTTP Zone Metrics" src="https://user-images.githubusercontent.com/52437445/130017483-5e528de0-27d9-4f29-8b70-cf93b0c5a1d9.png">
+Following are the metrics available when you have status_zone directive enabled in your location/server context:
 
-                                                                                                                                                     
-                                                                                                                                                     
+<img width="1488" alt="http_zones" src="https://user-images.githubusercontent.com/52437445/130018095-732ee65b-465d-4b2c-8256-d9264f81b409.png">
+
+
+## Testing LIVENESS of DoS
+
+It is configured via nginx.conf and can be accessed via browswer:
+
+```http://dvwa.example.com:8090/liveness```
+
+- Where expected response should be "Alive"
                                                                                                                                                      
 ## Testing Some Security Features:
 
